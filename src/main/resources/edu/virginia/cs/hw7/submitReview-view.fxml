@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="450.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.cs.hw7.gui.CourseReviewController">
+   <children>
+      <Label layoutX="115.0" layoutY="14.0" text="Course Review">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="submitCourseInstructions" layoutX="24.0" layoutY="88.0" prefHeight="47.0" prefWidth="397.0" text="To submit a course review, the first step is to submit the course name. Please enter a valid course name below." wrapText="true" />
+      <Label layoutX="131.0" layoutY="61.0" prefHeight="34.0" prefWidth="206.0" text="Submit a Review" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font></Label>
+      <Label layoutX="107.0" layoutY="141.0" text="Course Name:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="courseNameText" layoutX="212.0" layoutY="140.0" />
+      <Button fx:id="submitCourseButton" layoutX="142.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#submitCourse" style="-fx-background-color: green; -fx-border-radius: 3; -fx-border-color: black;" text="Submit Course Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="invalidCourseMessage" layoutX="47.0" layoutY="247.0" prefHeight="60.0" prefWidth="335.0" text="Error:" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="submitReviewToMainMenuButton" layoutX="305.0" layoutY="329.0" mnemonicParsing="false" onMouseClicked="#moveBackToMenuFromSubmitCourse" prefHeight="41.0" prefWidth="148.0" style="-fx-background-color: red; -fx-border-color: black; -fx-border-radius: 3;" text="Back To Main Menu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Pane fx:id="courseNameInstructions" layoutX="79.0" layoutY="80.0" prefHeight="200.0" prefWidth="295.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <Label layoutX="12.0" layoutY="58.0" prefHeight="120.0" prefWidth="268.0" text="Valid course names are ones that have a department name and catalog number. Department names are 4 or fewer capital letters. Catalog Number are 4 digits. An example of a valid course name is &quot;CS 3140&quot;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label layoutX="29.0" layoutY="26.0" text="What is a valid course name?" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Button layoutX="270.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#closeInstructions_submitCourse" style="-fx-background-color: red;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="-4.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#openInstructions_submitCourse" prefHeight="41.0" prefWidth="187.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 3;" text="What is a valid course name?" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Pane fx:id="submitReviewPane" layoutX="95.0" layoutY="173.0" prefHeight="152.0" prefWidth="280.0" style="-fx-background-color: #ADD8E6;" visible="false">
+         <children>
+            <TextField fx:id="review" layoutX="117.0" layoutY="7.0" />
+            <TextField fx:id="rating" layoutX="117.0" layoutY="47.0" />
+            <Label layoutX="32.0" layoutY="5.0" text="Review: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="44.0" text="Rating: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="submitReviewButton" layoutX="72.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#submitReview" style="-fx-background-color: green; -fx-border-radius: 3; -fx-border-color: black;" text="Submit Review" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="submitReviewErrorMessage" alignment="CENTER" layoutX="11.0" layoutY="82.0" prefHeight="19.0" prefWidth="245.0" text="Error" textAlignment="CENTER" textFill="RED" visible = "false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="alreadyReviewedPane" layoutX="55.0" layoutY="135.0" prefHeight="120.0" prefWidth="335.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <Label layoutX="41.0" layoutY="23.0" prefHeight="73.0" prefWidth="253.0" text="Error: You have already reviewed this course! Once you close this message, you will return to the main menu." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="314.0" mnemonicParsing="false" onMouseClicked="#closeAlreadyReviewedMessage" style="-fx-background-color: red;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="successSubmitReviewMessage" layoutX="74.0" layoutY="127.0" prefHeight="111.0" prefWidth="301.0" style="-fx-background-color: black;" visible="false">
+         <children>
+            <Button fx:id="closeSuccessReviewMessage" layoutX="278.0" layoutY="-2.0" mnemonicParsing="false" onMouseClicked="#closeSuccessSubmitReview" style="-fx-background-color: red;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="17.0" layoutY="27.0" prefHeight="61.0" prefWidth="268.0" text="Congrats! Your review was successfully submitted. Once you close this message, you will return to the main menu." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

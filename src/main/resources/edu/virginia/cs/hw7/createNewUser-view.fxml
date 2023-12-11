@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="450.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.cs.hw7.gui.CourseReviewController">
+   <children>
+      <TextField fx:id="newUserName" layoutX="197.0" layoutY="127.0" />
+      <PasswordField fx:id="newPassword" layoutX="197.0" layoutY="166.0" />
+      <PasswordField fx:id="confirmNewPassword" layoutX="197.0" layoutY="205.0" />
+      <Label layoutX="60.0" layoutY="208.0" text="Confirm Password:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="84.0" layoutY="169.0" text="New Password:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="87.0" layoutY="130.0" prefHeight="17.0" prefWidth="120.0" text="New Username:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="114.0" layoutY="14.0" text="Course Review">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="70.0" text="Create New Account">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="createAccountButton" layoutX="164.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#createNewUser" style="-fx-background-color: green; -fx-border-radius: 3; -fx-border-color: black;" text="Create Account" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="createNewUserError" alignment="CENTER" layoutX="43.0" layoutY="98.0" prefHeight="19.0" prefWidth="386.0" textAlignment="CENTER" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="backToLoginButton" layoutX="344.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#moveBackToLogin" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: red; -fx-border-color: black; -fx-border-radius: 3;" text="Back To Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

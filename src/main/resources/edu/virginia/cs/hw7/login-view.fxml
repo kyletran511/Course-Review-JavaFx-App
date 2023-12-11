@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="450.0" style="-fx-background-color: #ADD8E6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.cs.hw7.gui.CourseReviewController">
+   <children>
+      <TextField fx:id="userName" layoutX="151.0" layoutY="151.0" />
+      <PasswordField fx:id="password" layoutX="151.0" layoutY="183.0" />
+      <Button fx:id="loginButton" layoutX="314.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#login" style="-fx-background-color: green; -fx-border-color: white; -fx-border-radius: 3;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="switchToCreateUser" layoutX="150.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#moveToCreateUser" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 3;" text="Create New Account" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="courseReviewLabel" layoutX="115.0" layoutY="14.0" text="Course Review">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="151.0" prefHeight="25.0" prefWidth="77.0" text="Username:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="187.0" text="Password:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="invalidLoginMessage" alignment="CENTER" layoutX="66.0" layoutY="127.0" prefHeight="17.0" prefWidth="332.0" text="Invalid Credentials, Try Again!" textAlignment="CENTER" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutY="337.0" mnemonicParsing="false" onMouseClicked="#exitProgram" prefHeight="29.0" prefWidth="53.0" style="-fx-background-color: RED; -fx-border-color: white;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+   </children>
+</Pane>
